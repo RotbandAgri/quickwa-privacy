@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QuickWA — Privacy Policy</title>
+<title>QuickWA — Privacy Policy / מדיניות פרטיות</title>
 <style>
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
@@ -16,7 +16,7 @@
   }
   h1 { color: #006D3B; }
   h2 { color: #006D3B; margin-top: 32px; font-size: 1.1em; }
-  .updated { color: #666; font-size: 0.9em; margin-bottom: 32px; }
+  .updated { color: #666; font-size: 0.9em; margin-bottom: 24px; }
   ul { padding-inline-start: 20px; }
   li { margin-bottom: 8px; }
   .badge {
@@ -29,65 +29,151 @@
     font-weight: bold;
     margin: 4px 4px 4px 0;
   }
+  .lang-switch {
+    margin-bottom: 24px;
+  }
+  .lang-switch button {
+    font-family: inherit;
+    font-size: 0.9em;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #006D3B;
+    background: #fbfdf8;
+    color: #006D3B;
+    cursor: pointer;
+    margin-inline-end: 8px;
+  }
+  .lang-switch button.active {
+    background: #006D3B;
+    color: #fff;
+  }
+  [dir="ltr"] { text-align: left; }
+  .hidden { display: none; }
 </style>
 </head>
 <body>
 
-<h1>QuickWA — Privacy Policy</h1>
-<p class="updated">Last updated: August 2026</p>
-
-<div>
-  <span class="badge">🆓 100% Free</span>
-  <span class="badge">🔒 No data collected</span>
-  <span class="badge">🚫 No ads</span>
+<div class="lang-switch">
+  <button id="btn-he" class="active" onclick="showLang('he')">עברית</button>
+  <button id="btn-en" onclick="showLang('en')">English</button>
 </div>
 
-<p>
-QuickWA is a free Android app that lets you reply via WhatsApp when you can't
-answer a phone call. This policy explains exactly what the app does and does
-not do with your data.
-</p>
+<!-- Hebrew -->
+<div id="content-he" dir="rtl">
+  <h1>QuickWA — מדיניות פרטיות</h1>
+  <p class="updated">עדכון אחרון: אוגוסט 2026</p>
 
-<h2>Summary</h2>
-<ul>
-  <li>QuickWA does <strong>not</strong> collect, store, upload, sell, or share any personal data with anyone — including the developer.</li>
-  <li>QuickWA has <strong>no servers</strong>. Everything happens entirely on your device.</li>
-  <li>QuickWA is <strong>completely free</strong>, with no subscriptions, no in-app purchases, and no advertising.</li>
-</ul>
+  <div>
+    <span class="badge">🆓 חינמי 100%</span>
+    <span class="badge">🔒 לא נאסף מידע</span>
+    <span class="badge">🚫 בלי פרסומות</span>
+  </div>
 
-<h2>What the app reads, and why</h2>
-<ul>
-  <li><strong>Phone state / call log permission</strong> — used only to detect that a call is ringing or has ended, and to read the caller's phone number so the app can open WhatsApp with that number. This is required by Android itself to deliver the caller's number to any app.</li>
-  <li><strong>Contacts permission (optional)</strong> — used only to look up a caller's saved name instead of showing a bare phone number. The lookup happens locally on your device; your contacts are never copied, uploaded, or transmitted anywhere.</li>
-  <li><strong>Notifications / display-over-other-apps permission</strong> — used only to show the "Reply via WhatsApp" banner and notification on your screen.</li>
-</ul>
+  <p>
+  QuickWA היא אפליקציית אנדרואיד חינמית שמאפשרת להגיב בוואטסאפ כשלא ניתן לענות לשיחת טלפון.
+  המדיניות הזו מסבירה בדיוק מה האפליקציה עושה, ומה היא לא עושה, עם המידע שלך.
+  </p>
 
-<h2>What the app does not do</h2>
-<ul>
-  <li>It does not use the internet to send any information anywhere.</li>
-  <li>It does not include analytics, trackers, or third-party SDKs.</li>
-  <li>It does not show ads.</li>
-  <li>It does not require creating an account.</li>
-</ul>
+  <h2>תמצית</h2>
+  <ul>
+    <li>QuickWA <strong>לא</strong> אוספת, שומרת, מעלה, מוכרת, או משתפת שום מידע אישי עם אף אחד — כולל המפתח.</li>
+    <li>ל-QuickWA <strong>אין שרתים</strong>. הכל קורה לגמרי על המכשיר שלך.</li>
+    <li>QuickWA <strong>חינמית לחלוטין</strong>, בלי מנויים, בלי רכישות בתוך האפליקציה, ובלי פרסומות.</li>
+  </ul>
 
-<h2>Third parties</h2>
-<p>
-When you tap "Reply via WhatsApp," the app opens the WhatsApp application
-(or WhatsApp Business) installed on your device, using WhatsApp's own public
-chat-link format. QuickWA does not communicate with WhatsApp servers directly
-and has no access to your WhatsApp messages or account.
-</p>
+  <h2>מה האפליקציה קוראת, ולמה</h2>
+  <ul>
+    <li><strong>הרשאת מצב טלפון / יומן שיחות</strong> — משמשת רק לזיהוי שיחה מצלצלת או שהסתיימה, ולקריאת מספר המתקשר כדי לפתוח את וואטסאפ עם המספר הזה. זו דרישה של אנדרואיד עצמו כדי למסור את מספר המתקשר לכל אפליקציה.</li>
+    <li><strong>הרשאת אנשי קשר (אופציונלי)</strong> — משמשת רק לאיתור שם שמור של מתקשר במקום הצגת מספר בלבד. החיפוש מתבצע מקומית על המכשיר שלך; אנשי הקשר שלך לעולם לא מועתקים, מועלים, או משודרים לשום מקום.</li>
+    <li><strong>הרשאת התראות / הצגה מעל אפליקציות אחרות</strong> — משמשת רק להצגת הבאנר וההתראה "מענה בוואטסאפ" על המסך שלך.</li>
+  </ul>
 
-<h2>Changes to this policy</h2>
-<p>
-If this policy changes, the update will be posted on this page.
-</p>
+  <h2>מה האפליקציה לא עושה</h2>
+  <ul>
+    <li>היא לא משתמשת באינטרנט כדי לשלוח שום מידע לשום מקום.</li>
+    <li>היא לא כוללת אנליטיקס, מעקב, או ערכות פיתוח (SDK) של צד שלישי.</li>
+    <li>היא לא מציגה פרסומות.</li>
+    <li>היא לא דורשת יצירת חשבון.</li>
+  </ul>
 
-<h2>Contact</h2>
-<p>
-For questions about this policy, contact the developer via the Google Play
-Store listing for QuickWA.
-</p>
+  <h2>צדדים שלישיים</h2>
+  <p>
+  כשאתה לוחץ על "מענה בוואטסאפ", האפליקציה פותחת את אפליקציית וואטסאפ (או וואטסאפ עסקי) המותקנת
+  על המכשיר שלך, באמצעות פורמט קישור הצ'אט הציבורי של וואטסאפ עצמה. QuickWA לא מתקשרת ישירות
+  עם שרתי וואטסאפ ואין לה שום גישה להודעות או לחשבון הוואטסאפ שלך.
+  </p>
+
+  <h2>שינויים במדיניות זו</h2>
+  <p>אם מדיניות זו תשתנה, העדכון יפורסם בעמוד הזה.</p>
+
+  <h2>יצירת קשר</h2>
+  <p>לשאלות בנוגע למדיניות זו, ניתן ליצור קשר עם המפתח דרך עמוד האפליקציה ב-Google Play.</p>
+</div>
+
+<!-- English -->
+<div id="content-en" dir="ltr" class="hidden">
+  <h1>QuickWA — Privacy Policy</h1>
+  <p class="updated">Last updated: August 2026</p>
+
+  <div>
+    <span class="badge">🆓 100% Free</span>
+    <span class="badge">🔒 No data collected</span>
+    <span class="badge">🚫 No ads</span>
+  </div>
+
+  <p>
+  QuickWA is a free Android app that lets you reply via WhatsApp when you can't
+  answer a phone call. This policy explains exactly what the app does and does
+  not do with your data.
+  </p>
+
+  <h2>Summary</h2>
+  <ul>
+    <li>QuickWA does <strong>not</strong> collect, store, upload, sell, or share any personal data with anyone — including the developer.</li>
+    <li>QuickWA has <strong>no servers</strong>. Everything happens entirely on your device.</li>
+    <li>QuickWA is <strong>completely free</strong>, with no subscriptions, no in-app purchases, and no advertising.</li>
+  </ul>
+
+  <h2>What the app reads, and why</h2>
+  <ul>
+    <li><strong>Phone state / call log permission</strong> — used only to detect that a call is ringing or has ended, and to read the caller's phone number so the app can open WhatsApp with that number. This is required by Android itself to deliver the caller's number to any app.</li>
+    <li><strong>Contacts permission (optional)</strong> — used only to look up a caller's saved name instead of showing a bare phone number. The lookup happens locally on your device; your contacts are never copied, uploaded, or transmitted anywhere.</li>
+    <li><strong>Notifications / display-over-other-apps permission</strong> — used only to show the "Reply via WhatsApp" banner and notification on your screen.</li>
+  </ul>
+
+  <h2>What the app does not do</h2>
+  <ul>
+    <li>It does not use the internet to send any information anywhere.</li>
+    <li>It does not include analytics, trackers, or third-party SDKs.</li>
+    <li>It does not show ads.</li>
+    <li>It does not require creating an account.</li>
+  </ul>
+
+  <h2>Third parties</h2>
+  <p>
+  When you tap "Reply via WhatsApp," the app opens the WhatsApp application
+  (or WhatsApp Business) installed on your device, using WhatsApp's own public
+  chat-link format. QuickWA does not communicate with WhatsApp servers directly
+  and has no access to your WhatsApp messages or account.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the update will be posted on this page.</p>
+
+  <h2>Contact</h2>
+  <p>For questions about this policy, contact the developer via the Google Play Store listing for QuickWA.</p>
+</div>
+
+<script>
+function showLang(lang) {
+  document.getElementById('content-he').classList.toggle('hidden', lang !== 'he');
+  document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
+  document.getElementById('btn-he').classList.toggle('active', lang === 'he');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.documentElement.setAttribute('lang', lang);
+  document.documentElement.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
+}
+</script>
 
 </body>
 </html>
