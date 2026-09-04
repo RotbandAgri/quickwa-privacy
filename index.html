@@ -61,7 +61,7 @@
 <!-- Hebrew -->
 <div id="content-he" dir="rtl">
   <h1>QuickWA — מדיניות פרטיות</h1>
-  <p class="updated">עדכון אחרון: אוגוסט 2026</p>
+  <p class="updated">עדכון אחרון: ספטמבר 2026</p>
 
   <div>
     <span class="badge">🆓 חינמי 100%</span>
@@ -86,11 +86,12 @@
     <li><strong>הרשאת מצב טלפון / יומן שיחות</strong> — משמשת רק לזיהוי שיחה מצלצלת או שהסתיימה, ולקריאת מספר המתקשר כדי לפתוח את וואטסאפ עם המספר הזה. זו דרישה של אנדרואיד עצמו כדי למסור את מספר המתקשר לכל אפליקציה.</li>
     <li><strong>הרשאת אנשי קשר (אופציונלי)</strong> — משמשת רק לאיתור שם שמור של מתקשר במקום הצגת מספר בלבד. החיפוש מתבצע מקומית על המכשיר שלך; אנשי הקשר שלך לעולם לא מועתקים, מועלים, או משודרים לשום מקום.</li>
     <li><strong>הרשאת התראות / הצגה מעל אפליקציות אחרות</strong> — משמשת רק להצגת הבאנר וההתראה "מענה בוואטסאפ" על המסך שלך.</li>
+    <li><strong>הרשאת מיקום (אופציונלי)</strong> — משמשת אך ורק ברגע שאתה לוחץ באופן יזום על כפתור "מיקום נוכחי" כדי לשלוח את המיקום שלך למישהו בוואטסאפ, או כששומר מקום חדש (כמו "בית" או "עבודה") בעודך נמצא בו. האפליקציה <strong>לעולם לא</strong> עוקבת אחרי המיקום שלך ברקע, ולא שומרת היסטוריית מיקומים — היא רק קוראת נקודה אחת ברגע הלחיצה. הקואורדינטות שנשמרות עבור מקומות כמו "בית"/"עבודה" נשארות אך ורק על המכשיר שלך.</li>
   </ul>
 
   <h2>מה האפליקציה לא עושה</h2>
   <ul>
-    <li>היא לא משתמשת באינטרנט כדי לשלוח שום מידע לשום מקום.</li>
+    <li>היא לא שולחת מידע לשרתים שלה — אין לה שרתים בכלל.</li>
     <li>היא לא כוללת אנליטיקס, מעקב, או ערכות פיתוח (SDK) של צד שלישי.</li>
     <li>היא לא מציגה פרסומות.</li>
     <li>היא לא דורשת יצירת חשבון.</li>
@@ -98,9 +99,15 @@
 
   <h2>צדדים שלישיים</h2>
   <p>
-  כשאתה לוחץ על "מענה בוואטסאפ", האפליקציה פותחת את אפליקציית וואטסאפ (או וואטסאפ עסקי) המותקנת
-  על המכשיר שלך, באמצעות פורמט קישור הצ'אט הציבורי של וואטסאפ עצמה. QuickWA לא מתקשרת ישירות
-  עם שרתי וואטסאפ ואין לה שום גישה להודעות או לחשבון הוואטסאפ שלך.
+  כשאתה לוחץ על "מענה בוואטסאפ" (עם או בלי מיקום מצורף), האפליקציה פותחת את אפליקציית וואטסאפ
+  (או וואטסאפ עסקי) המותקנת על המכשיר שלך, באמצעות פורמט קישור הצ'אט הציבורי של וואטסאפ עצמה.
+  QuickWA לא מתקשרת ישירות עם שרתי וואטסאפ ואין לה שום גישה להודעות או לחשבון הוואטסאפ שלך.
+  </p>
+  <p>
+  אם אתה בוחר להזין כתובת ידנית (במקום להשתמש במיקום הנוכחי שלך) כדי לשמור מקום, הטקסט שהקלדת
+  נשלח לשירות תרגום הכתובות המובנה של אנדרואיד (Geocoder), שבדרך כלל פונה לשירותי המיקום של גוגל
+  כדי להפוך את הכתובת לקואורדינטות. זהו השימוש היחיד ברשת בכל האפליקציה, ומתבצע רק כשאתה בוחר
+  באופן יזום להזין כתובת בעצמך.
   </p>
 
   <h2>שינויים במדיניות זו</h2>
@@ -113,7 +120,7 @@
 <!-- English -->
 <div id="content-en" dir="ltr" class="hidden">
   <h1>QuickWA — Privacy Policy</h1>
-  <p class="updated">Last updated: August 2026</p>
+  <p class="updated">Last updated: September 2026</p>
 
   <div>
     <span class="badge">🆓 100% Free</span>
@@ -139,11 +146,12 @@
     <li><strong>Phone state / call log permission</strong> — used only to detect that a call is ringing or has ended, and to read the caller's phone number so the app can open WhatsApp with that number. This is required by Android itself to deliver the caller's number to any app.</li>
     <li><strong>Contacts permission (optional)</strong> — used only to look up a caller's saved name instead of showing a bare phone number. The lookup happens locally on your device; your contacts are never copied, uploaded, or transmitted anywhere.</li>
     <li><strong>Notifications / display-over-other-apps permission</strong> — used only to show the "Reply via WhatsApp" banner and notification on your screen.</li>
+    <li><strong>Location permission (optional)</strong> — used only at the exact moment you tap "current location" to send your location to someone via WhatsApp, or when saving a new place (like "Home" or "Work") while standing there. The app <strong>never</strong> tracks your location in the background and keeps no location history — it reads a single point only when you tap the button. Coordinates saved for places like "Home"/"Work" stay only on your device.</li>
   </ul>
 
   <h2>What the app does not do</h2>
   <ul>
-    <li>It does not use the internet to send any information anywhere.</li>
+    <li>It does not send information to its own servers — it has none.</li>
     <li>It does not include analytics, trackers, or third-party SDKs.</li>
     <li>It does not show ads.</li>
     <li>It does not require creating an account.</li>
@@ -151,10 +159,17 @@
 
   <h2>Third parties</h2>
   <p>
-  When you tap "Reply via WhatsApp," the app opens the WhatsApp application
-  (or WhatsApp Business) installed on your device, using WhatsApp's own public
-  chat-link format. QuickWA does not communicate with WhatsApp servers directly
-  and has no access to your WhatsApp messages or account.
+  When you tap "Reply via WhatsApp" (with or without a location attached), the app opens the
+  WhatsApp application (or WhatsApp Business) installed on your device, using WhatsApp's own
+  public chat-link format. QuickWA does not communicate with WhatsApp servers directly and has
+  no access to your WhatsApp messages or account.
+  </p>
+  <p>
+  If you choose to type an address manually (instead of using your current location) to save a
+  place, the text you type is sent to Android's built-in address-lookup service (Geocoder), which
+  typically contacts Google's location services to turn that address into coordinates. This is the
+  only network use anywhere in the app, and it only happens when you actively choose to type an
+  address yourself.
   </p>
 
   <h2>Changes to this policy</h2>
