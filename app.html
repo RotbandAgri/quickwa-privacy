@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuickWA — מה האפליקציה עושה / What the app does</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #fbfdf8;
+  }
+  h1 { color: #006D3B; }
+  h2 { color: #006D3B; margin-top: 32px; font-size: 1.1em; }
+  .updated { color: #666; font-size: 0.9em; margin-bottom: 24px; }
+  ul { padding-inline-start: 20px; }
+  li { margin-bottom: 8px; }
+  .badge {
+    display: inline-block;
+    background: #97F5BD;
+    color: #002110;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: bold;
+    margin: 4px 4px 4px 0;
+  }
+  .lang-switch {
+    margin-bottom: 24px;
+  }
+  .lang-switch button {
+    font-family: inherit;
+    font-size: 0.9em;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #006D3B;
+    background: #fbfdf8;
+    color: #006D3B;
+    cursor: pointer;
+    margin-inline-end: 8px;
+  }
+  .lang-switch button.active {
+    background: #006D3B;
+    color: #fff;
+  }
+  [dir="ltr"] { text-align: left; }
+  .hidden { display: none; }
+  .feature-card {
+    background: #fff;
+    border: 1px solid #e0ece4;
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+  }
+  .feature-card h3 {
+    margin: 0 0 6px 0;
+    color: #1a1a1a;
+    font-size: 1em;
+  }
+  .feature-card p {
+    margin: 0;
+    color: #444;
+    font-size: 0.95em;
+  }
+  .nav-links {
+    margin-bottom: 20px;
+    font-size: 0.9em;
+  }
+  .nav-links a {
+    color: #006D3B;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .nav-links a:hover { text-decoration: underline; }
+  .example-box {
+    background: #fff8e6;
+    border: 1px solid #f0d98c;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 16px 0 24px 0;
+  }
+  .example-box h3 {
+    margin: 0 0 10px 0;
+    color: #7a5c00;
+    font-size: 1em;
+  }
+  .example-box .step {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 6px;
+    align-items: flex-start;
+  }
+  .example-box .step-num {
+    flex-shrink: 0;
+    font-weight: bold;
+  }
+  .example-box .before-after {
+    display: block;
+    font-weight: bold;
+    margin: 12px 0 6px 0;
+  }
+  .example-box p:first-child { margin-top: 0; }
+  .example-box p:last-child { margin-bottom: 0; }
+</style>
+</head>
+<body>
+
+<div class="lang-switch">
+  <button id="btn-he" class="active" onclick="showLang('he')">עברית</button>
+  <button id="btn-en" onclick="showLang('en')">English</button>
+</div>
+
+<!-- Hebrew -->
+<div id="content-he" dir="rtl">
+  <div class="nav-links">📄 <a href="index.html">למדיניות הפרטיות המלאה</a></div>
+
+  <h1>QuickWA — מה האפליקציה עושה</h1>
+  <p class="updated">עדכון אחרון: ספטמבר 2026</p>
+
+  <div>
+    <span class="badge">🆓 חינמי 100%</span>
+    <span class="badge">🔒 לא נאסף מידע</span>
+    <span class="badge">📵 כמעט בלי אינטרנט</span>
+    <span class="badge">🚫 בלי פרסומות</span>
+  </div>
+
+  <p>
+  QuickWA היא אפליקציית אנדרואיד חינמית וקטנה שנועדה לפתור בעיה פשוטה: כשלא נוח לענות לטלפון,
+  אפשר להגיב מיד בהודעת וואטסאפ במקום — בלחיצה אחת. הדף הזה מסביר בקצרה מה האפליקציה עושה,
+  כולל הוודג'טים למסך הבית, ולמה אין שום סיבה לחשוש מהתקנה שלה.
+  </p>
+
+  <h2>התכונות העיקריות</h2>
+
+  <div class="feature-card">
+    <h3>📞 מענה מהיר בשיחה נכנסת</h3>
+    <p>כשמתקבלת שיחה, מופיע באנר קטן על המסך עם כפתור "מענה בוואטסאפ" ועד 3 הודעות מוכנות
+    לבחירה (למשל "אני בפגישה, אחזור אליך"). לחיצה אחת פותחת וואטסאפ עם ההודעה מוכנה לשליחה.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>📋 היסטוריית שיחות שלא נענו</h3>
+    <p>שיחות שפספסתם נשמרות ברשימה קצרה (עד 15 שיחות, עד 7 ימים) — כדי שתוכלו לחזור ולהגיב גם
+    מאוחר יותר, ישירות מהאפליקציה או מהוודג'ט הייעודי.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>📍 שיתוף מיקום מהיר</h3>
+    <p>אפשר לשמור עד 8 מקומות בשם חופשי (בית, עבודה, ועוד), לסמן עד 3 כמועדפים, ולשלוח אותם —
+    או את המיקום החי שלכם באותו רגע — למי שהתקשר אליכם לאחרונה. הכתובת נשלחת כקישור נוח
+    לגוגל מפות או Waze (לפי בחירה אישית בהגדרות), ולא כקובץ מיקום מסתורי.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>✏️ תבניות הודעה אישיות</h3>
+    <p>עד 3 הודעות מענה מהיר, שאפשר לערוך, למחוק, או להוסיף בעצמכם — כדי שההודעה שנשלחת תישמע
+    בדיוק כמוכם.</p>
+  </div>
+
+  <h2>הוודג'טים (ישומונים) למסך הבית</h2>
+  <p>לאפליקציה שני ווידג'טים נפרדים שאפשר להוסיף למסך הבית — לגמרי אופציונלי:</p>
+  <ul>
+    <li><strong>ווידג'ט שיחות שלא נענו</strong> — מציג את השיחה האחרונה שפספסתם עם כפתור מענה מיידי,
+    בלי לפתוח את האפליקציה בכלל.</li>
+    <li><strong>ווידג'ט שיתוף מיקום</strong> — מציג את מי שהתקשר אליכם לאחרונה (עד 10 מתקשרים, מ-12
+    השעות האחרונות — גם אם המספר שלו לא שמור באנשי הקשר בכלל), עם עד 3 כפתורים למקומות המועדפים
+    שלכם (למשל בית/עבודה) ועוד כפתור "מיקום נוכחי" — כדי לשלוח לו מיקום בלחיצה אחת, בלי לפתוח את
+    האפליקציה.</li>
+  </ul>
+  <p>שני הווידג'טים רק <strong>מציגים</strong> מידע ששמור כבר על המכשיר שלכם — הם לא אוספים, לא
+  מעלים, ולא משדרים שום דבר ברקע.</p>
+
+  <div class="example-box">
+    <h3>💡 דוגמה מהחיים: הטכנאי שצריך להגיע אליכם הביתה</h3>
+    <p>קיבלתם שיחת טלפון מטכנאי שאתם לא מכירים ולא שמור אצלכם באנשי הקשר. בסוף השיחה הוא מבקש
+    מכם לשלוח לו מיקום כדי למצוא את הבית.</p>
+
+    <span class="before-after">😩 לפני QuickWA:</span>
+    <div class="step"><span class="step-num">1.</span><span>מסיימים את השיחה</span></div>
+    <div class="step"><span class="step-num">2.</span><span>נכנסים ליומן השיחות ומעתיקים את המספר שהתקשר אליכם</span></div>
+    <div class="step"><span class="step-num">3.</span><span>פותחים וואטסאפ, מדביקים את המספר, פותחים שיחה חדשה</span></div>
+    <div class="step"><span class="step-num">4.</span><span>רק אז שולחים מיקום — ותקווה שלא טעיתם במספר</span></div>
+
+    <span class="before-after">😊 עם QuickWA:</span>
+    <div class="step"><span class="step-num">1.</span><span>ברגע שהשיחה מסתיימת, הטכנאי מופיע אוטומטית בווידג'ט "שיתוף מיקום" שלכם במסך הבית — גם בלי שהמספר שלו שמור באנשי קשר</span></div>
+    <div class="step"><span class="step-num">2.</span><span>לוחצים על כפתור "בית" (או "מיקום נוכחי")</span></div>
+    <div class="step"><span class="step-num">3.</span><span>המיקום נשלח אליו ישירות בוואטסאפ — בלי להעתיק שום מספר, ובלי לפתוח בכלל את אפליקציית QuickWA</span></div>
+    <p style="margin-top:10px;">אחרי השליחה, הטכנאי פשוט נעלם מהוודג'ט — הרשימה נשארת נקייה רק
+    למי שבאמת רלוונטי כרגע.</p>
+  </div>
+
+  <h2>למה אין בעיה להתקין</h2>
+  <ul>
+    <li><strong>אין שרתים</strong> — כל המידע (תבניות, היסטוריית שיחות, מקומות שמורים) נשמר רק על
+    המכשיר שלכם, ולעולם לא עוזב אותו.</li>
+    <li><strong>אין אנליטיקס, מעקב, או פרסומות</strong> — אין שום קוד של צד שלישי שאוסף מידע עליכם.</li>
+    <li><strong>אין צורך בחשבון</strong> — אין הרשמה, אין סיסמה, אין מייל.</li>
+    <li><strong>גישה לוואטסאפ בלבד לפתיחה</strong> — האפליקציה פותחת את וואטסאפ עם הודעה מוכנה,
+    בדיוק כמו קישור וואטסאפ רגיל שמקבלים בכל אתר. אין לה גישה להודעות שלכם או לחשבון שלכם בוואטסאפ.</li>
+    <li><strong>המיקום נקרא רק בלחיצה יזומה</strong> — אף פעם לא ברקע, ואף פעם לא בלי שלחצתם על כפתור
+    בעצמכם.</li>
+  </ul>
+  <p>לרשימה המלאה של ההרשאות ולמה כל אחת נדרשת — <a href="index.html">ראו במדיניות הפרטיות המלאה</a>.</p>
+
+  <h2>שאלות?</h2>
+  <p>לשאלות או פידבק, אפשר ליצור קשר עם המפתח דרך עמוד האפליקציה ב-Google Play.</p>
+</div>
+
+<!-- English -->
+<div id="content-en" dir="ltr" class="hidden">
+  <div class="nav-links">📄 <a href="index.html">Full privacy policy</a></div>
+
+  <h1>QuickWA — What the app does</h1>
+  <p class="updated">Last updated: September 2026</p>
+
+  <div>
+    <span class="badge">🆓 100% Free</span>
+    <span class="badge">🔒 No data collected</span>
+    <span class="badge">📵 Almost no internet use</span>
+    <span class="badge">🚫 No ads</span>
+  </div>
+
+  <p>
+  QuickWA is a small, free Android app built to solve one simple problem: when you can't
+  take a call, you can instantly reply with a WhatsApp message instead — with one tap.
+  This page briefly explains what the app does, including its home-screen widgets, and why
+  there's no reason to worry about installing it.
+  </p>
+
+  <h2>Main features</h2>
+
+  <div class="feature-card">
+    <h3>📞 Quick reply on an incoming call</h3>
+    <p>When a call comes in, a small banner appears with a "Reply via WhatsApp" button and up to
+    3 ready-made messages to choose from (e.g. "I'm in a meeting, I'll call you back"). One tap
+    opens WhatsApp with the message ready to send.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>📋 Missed-call history</h3>
+    <p>Calls you missed are kept in a short list (up to 15 calls, up to 7 days) so you can reply
+    later too — right from the app or from the dedicated widget.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>📍 Quick location sharing</h3>
+    <p>Save up to 8 freely-named places (Home, Work, etc.), mark up to 3 as favorites, and send
+    them — or your live current location — to whoever called you last. The address is sent as a
+    convenient link to Google Maps or Waze (your choice, set once in Settings), not as some
+    mysterious location file.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>✏️ Custom message templates</h3>
+    <p>Up to 3 quick-reply messages that you can edit, delete, or add yourself — so the message
+    that gets sent sounds exactly like you.</p>
+  </div>
+
+  <h2>Home-screen widgets</h2>
+  <p>The app has two separate, fully optional home-screen widgets:</p>
+  <ul>
+    <li><strong>Missed-calls widget</strong> — shows the latest call you missed with an instant
+    reply button, without opening the app at all.</li>
+    <li><strong>Location-sharing widget</strong> — shows whoever called you recently (up to 10
+    callers, from the last 12 hours — even if their number isn't saved in your contacts at all),
+    with up to 3 buttons for your favorite places (e.g. Home/Work) plus a "current location"
+    button — to send them a location in one tap, without opening the app.</li>
+  </ul>
+  <p>Both widgets only <strong>display</strong> information already saved on your device — they
+  don't collect, upload, or transmit anything in the background.</p>
+
+  <div class="example-box">
+    <h3>💡 Real-life example: the technician who needs to find your house</h3>
+    <p>You get a call from a technician you don't know, whose number isn't saved in your
+    contacts. At the end of the call, he asks you to send your location so he can find the
+    house.</p>
+
+    <span class="before-after">😩 Before QuickWA:</span>
+    <div class="step"><span class="step-num">1.</span><span>End the call</span></div>
+    <div class="step"><span class="step-num">2.</span><span>Go into the call log and copy the number that called you</span></div>
+    <div class="step"><span class="step-num">3.</span><span>Open WhatsApp, paste the number, start a new chat</span></div>
+    <div class="step"><span class="step-num">4.</span><span>Only then send a location — and hope you didn't mistype the number</span></div>
+
+    <span class="before-after">😊 With QuickWA:</span>
+    <div class="step"><span class="step-num">1.</span><span>The moment the call ends, the technician automatically appears in your "location sharing" widget on the home screen — even without his number being saved as a contact</span></div>
+    <div class="step"><span class="step-num">2.</span><span>Tap the "Home" button (or "current location")</span></div>
+    <div class="step"><span class="step-num">3.</span><span>The location is sent to him directly via WhatsApp — no copying a number, and without opening the QuickWA app at all</span></div>
+    <p style="margin-top:10px;">After sending, the technician simply disappears from the widget —
+    the list stays clean, showing only who's actually relevant right now.</p>
+  </div>
+
+  <h2>Why it's safe to install</h2>
+  <ul>
+    <li><strong>No servers</strong> — all data (templates, call history, saved places) stays on
+    your device only, and never leaves it.</li>
+    <li><strong>No analytics, tracking, or ads</strong> — no third-party code collecting anything
+    about you.</li>
+    <li><strong>No account needed</strong> — no sign-up, no password, no email.</li>
+    <li><strong>Only opens WhatsApp</strong> — the app opens WhatsApp with a pre-filled message,
+    exactly like a regular WhatsApp link you'd get on any website. It has no access to your
+    messages or WhatsApp account.</li>
+    <li><strong>Location read only on tap</strong> — never in the background, and never without
+    you actively tapping a button yourself.</li>
+  </ul>
+  <p>For the full list of permissions and why each is needed — <a href="index.html">see the
+  complete privacy policy</a>.</p>
+
+  <h2>Questions?</h2>
+  <p>For questions or feedback, contact the developer via the Google Play Store listing for
+  QuickWA.</p>
+</div>
+
+<script>
+function showLang(lang) {
+  document.getElementById('content-he').classList.toggle('hidden', lang !== 'he');
+  document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
+  document.getElementById('btn-he').classList.toggle('active', lang === 'he');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.documentElement.setAttribute('lang', lang);
+  document.documentElement.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
+}
+</script>
+
+</body>
+</html>
